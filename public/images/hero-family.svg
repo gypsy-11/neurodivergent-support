@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F3F4F6"/>
+  
+  <!-- Family silhouette -->
+  <g transform="translate(100, 80)">
+    <!-- Parent 1 -->
+    <circle cx="50" cy="30" r="25" fill="#14B8A6"/>
+    <rect x="35" y="55" width="30" height="60" rx="15" fill="#14B8A6"/>
+    
+    <!-- Parent 2 -->
+    <circle cx="120" cy="30" r="25" fill="#0F766E"/>
+    <rect x="105" y="55" width="30" height="60" rx="15" fill="#0F766E"/>
+    
+    <!-- Child -->
+    <circle cx="85" cy="50" r="20" fill="#5EEAD4"/>
+    <rect x="75" y="70" width="20" height="40" rx="10" fill="#5EEAD4"/>
+    
+    <!-- Connection lines -->
+    <line x1="75" y1="85" x2="95" y2="85" stroke="#134E4A" stroke-width="2"/>
+    <line x1="65" y1="85" x2="105" y2="85" stroke="#134E4A" stroke-width="2"/>
+  </g>
+  
+  <!-- Support elements -->
+  <g transform="translate(50, 200)">
+    <!-- Heart symbol -->
+    <path d="M20 10C20 10 25 5 30 10C35 5 40 10 40 10C40 10 35 20 30 25C25 20 20 10 20 10Z" fill="#EF4444"/>
+    
+    <!-- Support text -->
+    <text x="50" y="20" font-family="Arial, sans-serif" font-size="14" fill="#374151">Support</text>
+    <text x="50" y="35" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">Family</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="350" cy="50" r="8" fill="#5EEAD4" opacity="0.6"/>
+  <circle cx="30" cy="250" r="6" fill="#14B8A6" opacity="0.4"/>
+  <circle cx="370" cy="200" r="4" fill="#0F766E" opacity="0.3"/>
+</svg>

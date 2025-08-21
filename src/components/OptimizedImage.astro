@@ -7,6 +7,7 @@ export interface Props {
   class?: string;
   priority?: boolean;
   sizes?: string;
+  fallback?: string;
 }
 
 const { 
@@ -16,7 +17,8 @@ const {
   height = 600, 
   class: className = "",
   priority = false,
-  sizes = "(max-width: 768px) 100vw, 50vw"
+  sizes = "(max-width: 768px) 100vw, 50vw",
+  fallback = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0yMDAgMTUwQzE3OC45NTQgMTUwIDE2MiAxMzMuMDQ2IDE2MiAxMTJDMTYyIDkwLjk1NCAxNzguOTU0IDc0IDIwMCA3NEMyMjEuMDQ2IDc0IDIzOCA5MC45NTQgMjM4IDExMkMyMzggMTMzLjA0NiAyMjEuMDQ2IDE1MCAyMDAgMTUwWiIgZmlsbD0iI0QxRDFENiIvPgo8cGF0aCBkPSJNMjAwIDE3NEMxNzguOTU0IDE3NCAxNjIgMTU3LjA0NiAxNjIgMTM2QzE2MiAxMTQuOTU0IDE3OC45NTQgOTggMjAwIDk4QzIyMS4wNDYgOTggMjM4IDExNC45NTQgMjM4IDEzNkMyMzggMTU3LjA0NiAyMjEuMDQ2IDE3NCAyMDAgMTc0WiIgZmlsbD0iI0QxRDFENiIvPgo8L3N2Zz4K"
 } = Astro.props;
 
 // Generate optimized image URLs
@@ -39,6 +41,7 @@ const webpUrl = new URL(src.replace(/\.(jpg|jpeg|png)$/, '.webp'), Astro.url);
     loading={priority ? "eager" : "lazy"}
     decoding="async"
     style="width: 100%; height: auto;"
+    onerror={`this.onerror=null; this.src='${fallback}';`}
   />
 </picture>
 
