@@ -1,8 +1,42 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Structured data for about page
+const aboutStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Neurodivergent Support Coaching Team",
+  "description": "Experienced coaching team supporting families with neurodivergent children across Australia",
+  "url": "https://neurodivergentsupport.com.au/about",
+  "jobTitle": "Neurodivergent Family Coach",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Neurodivergent Support Coaching"
+  },
+  "knowsAbout": [
+    "Neurodivergent Parenting",
+    "ADHD Support",
+    "Autism Support",
+    "Family Coaching",
+    "Parent Wellness",
+    "Advocacy Support"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AU"
+  }
+};
 ---
 
-<BaseLayout title="About - Neurodivergent Support Coaching" description="Meet your coach and learn about our mission to support Australian families with neurodivergent children through compassionate, experienced guidance.">
+<BaseLayout 
+  title="About Our Neurodivergent Parenting Coaches | Expert Family Support Australia"
+  description="Meet our experienced neurodivergent parenting coaches dedicated to supporting Australian families. Learn about our mission, values, and commitment to compassionate family coaching."
+  canonical="https://neurodivergentsupport.com.au/about"
+  keywords="neurodivergent parenting coaches, ADHD mum coach Australia, autism parenting specialist, family coaching experts, neurodivergent support team, parenting consultant about"
+  ogImage="https://neurodivergentsupport.com.au/og-about.jpg"
+  ogType="website"
+  structuredData={aboutStructuredData}
+>
   <section class="hero">
     <div class="container">
       <div class="hero-content">

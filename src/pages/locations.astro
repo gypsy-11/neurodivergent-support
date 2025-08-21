@@ -1,8 +1,169 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Structured data for locations page
+const locationsStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Neurodivergent Family Coaching Australia",
+  "description": "Online neurodivergent family coaching services available across all Australian states and territories",
+  "provider": {
+    "@type": "Organization",
+    "name": "Neurodivergent Support Coaching",
+    "url": "https://neurodivergentsupport.com.au"
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "New South Wales",
+      "containsPlace": [
+        {"@type": "City", "name": "Sydney"},
+        {"@type": "City", "name": "Newcastle"},
+        {"@type": "City", "name": "Wollongong"},
+        {"@type": "City", "name": "Central Coast"}
+      ]
+    },
+    {
+      "@type": "State",
+      "name": "Victoria",
+      "containsPlace": [
+        {"@type": "City", "name": "Melbourne"},
+        {"@type": "City", "name": "Geelong"},
+        {"@type": "City", "name": "Ballarat"},
+        {"@type": "City", "name": "Bendigo"}
+      ]
+    },
+    {
+      "@type": "State",
+      "name": "Queensland",
+      "containsPlace": [
+        {"@type": "City", "name": "Brisbane"},
+        {"@type": "City", "name": "Gold Coast"},
+        {"@type": "City", "name": "Sunshine Coast"},
+        {"@type": "City", "name": "Toowoomba"}
+      ]
+    },
+    {
+      "@type": "State",
+      "name": "South Australia",
+      "containsPlace": [
+        {"@type": "City", "name": "Adelaide"},
+        {"@type": "City", "name": "Mount Gambier"},
+        {"@type": "City", "name": "Whyalla"}
+      ]
+    },
+    {
+      "@type": "State",
+      "name": "Western Australia",
+      "containsPlace": [
+        {"@type": "City", "name": "Perth"},
+        {"@type": "City", "name": "Fremantle"},
+        {"@type": "City", "name": "Rockingham"}
+      ]
+    },
+    {
+      "@type": "State",
+      "name": "Tasmania",
+      "containsPlace": [
+        {"@type": "City", "name": "Hobart"},
+        {"@type": "City", "name": "Launceston"}
+      ]
+    },
+    {
+      "@type": "Territory",
+      "name": "Australian Capital Territory",
+      "containsPlace": [
+        {"@type": "City", "name": "Canberra"}
+      ]
+    },
+    {
+      "@type": "Territory",
+      "name": "Northern Territory",
+      "containsPlace": [
+        {"@type": "City", "name": "Darwin"},
+        {"@type": "City", "name": "Alice Springs"}
+      ]
+    }
+  ],
+  "serviceType": "Online Family Coaching",
+  "category": "Family Support",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "AUD",
+    "price": "150",
+    "priceValidUntil": "2024-12-31"
+  }
+};
+
+// Local business structured data for major cities
+const localBusinessData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Neurodivergent Support Coaching - Sydney",
+    "description": "ADHD mum coaching and autism parenting support in Sydney",
+    "url": "https://neurodivergentsupport.com.au/locations/sydney",
+    "telephone": "+61-2-1234-5678",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sydney",
+      "addressRegion": "NSW",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-33.8688",
+      "longitude": "151.2093"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Sydney"
+    },
+    "serviceArea": {
+      "@type": "State",
+      "name": "New South Wales"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Neurodivergent Support Coaching - Melbourne",
+    "description": "ADHD mum coaching and autism parenting support in Melbourne",
+    "url": "https://neurodivergentsupport.com.au/locations/melbourne",
+    "telephone": "+61-2-1234-5678",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-37.8136",
+      "longitude": "144.9631"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Melbourne"
+    },
+    "serviceArea": {
+      "@type": "State",
+      "name": "Victoria"
+    }
+  }
+];
 ---
 
-<BaseLayout title="Locations - Neurodivergent Support Coaching" description="We provide neurodivergent family coaching services across Australia with convenient online sessions available nationwide.">
+<BaseLayout 
+  title="ADHD Mum Coaching Sydney, Melbourne, Brisbane & Australia Wide | Online Services"
+  description="Expert ADHD mum coaching and autism parenting support available online across Australia. Serving Sydney, Melbourne, Brisbane, Perth, Adelaide and all major cities. Book your consultation today."
+  canonical="https://neurodivergentsupport.com.au/locations"
+  keywords="ADHD mum coaching Sydney, autism parenting support Melbourne, neurodivergent family coaching Brisbane, Perth ADHD coaching, Adelaide autism parenting, Gold Coast ADHD parenting, Newcastle autism mum coach, Canberra neurodivergent mum support"
+  ogImage="https://neurodivergentsupport.com.au/og-locations.jpg"
+  ogType="website"
+  structuredData={[locationsStructuredData, ...localBusinessData]}
+>
   <section class="hero">
     <div class="container">
       <h1>Online Services</h1>

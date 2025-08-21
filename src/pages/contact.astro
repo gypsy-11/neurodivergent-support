@@ -1,8 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Structured data for contact page
+const contactStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Neurodivergent Support Coaching",
+  "description": "Get in touch to book a consultation or learn more about our neurodivergent family coaching services",
+  "url": "https://neurodivergentsupport.com.au/contact",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Neurodivergent Support Coaching",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+61-2-1234-5678",
+      "contactType": "customer service",
+      "email": "info@neurodivergentsupport.com.au",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AU"
+    }
+  }
+};
 ---
 
-<BaseLayout title="Contact - Neurodivergent Support Coaching" description="Get in touch for your free consultation. Contact us by phone, email, or through our online form to discuss your family's needs.">
+<BaseLayout 
+  title="Contact Neurodivergent Support Coaching | Book Free Consultation Australia"
+  description="Book your free 30-minute consultation with our neurodivergent family coaching experts. Get in touch today to start your family's support journey."
+  canonical="https://neurodivergentsupport.com.au/contact"
+  keywords="book neurodivergent coaching consultation, ADHD mum coach contact, autism parenting support booking, family coaching consultation Australia, free consultation neurodivergent support"
+  ogImage="https://neurodivergentsupport.com.au/og-contact.jpg"
+  ogType="website"
+  structuredData={contactStructuredData}
+>
   <section class="hero">
     <div class="container">
       <h1>Get In Touch</h1>

@@ -1,0 +1,74 @@
+---
+// Performance monitoring component for Core Web Vitals
+---
+
+<script>
+  // Core Web Vitals monitoring
+  if ('PerformanceObserver' in window) {
+    // Largest Contentful Paint (LCP)
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry.startTime);
+      
+      // Send to analytics if needed
+      if (lastEntry.startTime > 2500) {
+        console.warn('LCP is above recommended threshold:', lastEntry.startTime);
+      }
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay (FID)
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach((entry) => {
+        console.log('FID:', entry.processingStart - entry.startTime);
+        
+        if (entry.processingStart - entry.startTime > 100) {
+          console.warn('FID is above recommended threshold:', entry.processingStart - entry.startTime);
+        }
+      });
+    }).observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach((entry) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          console.log('CLS:', clsValue);
+          
+          if (clsValue > 0.1) {
+            console.warn('CLS is above recommended threshold:', clsValue);
+          }
+        }
+      });
+    }).observe({ entryTypes: ['layout-shift'] });
+  }
+
+  // Image loading performance
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (img.complete) {
+        console.log('Image loaded:', img.src, 'Time:', performance.now());
+      } else {
+        img.addEventListener('load', () => {
+          console.log('Image loaded:', img.src, 'Time:', performance.now());
+        });
+      }
+    });
+  });
+
+  // Resource loading performance
+  if ('PerformanceObserver' in window) {
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach((entry) => {
+        if (entry.initiatorType === 'img' && entry.duration > 1000) {
+          console.warn('Slow image load:', entry.name, 'Duration:', entry.duration);
+        }
+      });
+    }).observe({ entryTypes: ['resource'] });
+  }
+</script>

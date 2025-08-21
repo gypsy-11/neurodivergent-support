@@ -1,8 +1,115 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Structured data for services page
+const servicesStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Neurodivergent Support Services",
+  "description": "Comprehensive coaching services for families with neurodivergent children across Australia",
+  "itemListElement": [
+    {
+      "@type": "Service",
+      "position": 1,
+      "name": "Parent Wellness Coaching",
+      "description": "Self-care strategies and wellness support for parents of neurodivergent children",
+      "provider": {
+        "@type": "Organization",
+        "name": "Neurodivergent Support Coaching"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "120",
+        "priceCurrency": "AUD",
+        "priceValidUntil": "2024-12-31",
+        "availability": "https://schema.org/InStock"
+      },
+      "serviceType": "Parent Wellness",
+      "category": "Health and Wellness"
+    },
+    {
+      "@type": "Service",
+      "position": 2,
+      "name": "Family Coaching",
+      "description": "Personalised one-on-one coaching sessions for families with neurodivergent children",
+      "provider": {
+        "@type": "Organization",
+        "name": "Neurodivergent Support Coaching"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "150",
+        "priceCurrency": "AUD",
+        "priceValidUntil": "2024-12-31",
+        "availability": "https://schema.org/InStock"
+      },
+      "serviceType": "Family Coaching",
+      "category": "Family Support"
+    },
+    {
+      "@type": "Service",
+      "position": 3,
+      "name": "Group Programs",
+      "description": "8-week group coaching programs for families on similar journeys",
+      "provider": {
+        "@type": "Organization",
+        "name": "Neurodivergent Support Coaching"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "480",
+        "priceCurrency": "AUD",
+        "priceValidUntil": "2024-12-31",
+        "availability": "https://schema.org/InStock"
+      },
+      "serviceType": "Group Coaching",
+      "category": "Family Support"
+    }
+  ]
+};
+
+// FAQ structured data
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services do you offer for families with neurodivergent children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer parent wellness coaching, family coaching, and group programs designed specifically for families with neurodivergent children."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do your coaching services cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our services range from $120 per session for parent wellness to $150 per session for family coaching, with package discounts available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer online coaching sessions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer both in-person and online coaching sessions to accommodate families across Australia."
+      }
+    }
+  ]
+};
 ---
 
-<BaseLayout title="Services - Neurodivergent Support Coaching" description="Comprehensive coaching services for families with neurodivergent children. Family coaching, parent wellness programs and more.">
+<BaseLayout 
+  title="Neurodivergent Parenting Services & Coaching Programs Australia | Pricing"
+  description="Expert neurodivergent parenting services and coaching programs across Australia. Family coaching from $150/session, parent wellness programs, and group support. Book your free consultation."
+  canonical="https://neurodivergentsupport.com.au/services"
+  keywords="neurodivergent parenting services, family coaching Australia, parent wellness programs, neurodivergent parenting course cost, ADHD mum coaching price, autism parenting program fees, parenting consultant fees"
+  ogImage="https://neurodivergentsupport.com.au/og-services.jpg"
+  ogType="website"
+  structuredData={[servicesStructuredData, faqStructuredData]}
+>
   <section class="hero">
     <div class="container">
       <h1>Our Services</h1>
