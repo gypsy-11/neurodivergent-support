@@ -30,7 +30,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h4>Investment:</h4>
             <div class="pricing-content">
               <p>$120 per session | $600 for 6-session package</p>
-              <a href="/contact" class="btn btn-primary">Book Now</a>
+              <div class="pricing-buttons">
+                <a href="/parent-wellness" class="btn btn-secondary">Learn More</a>
+                <a href="/contact" class="btn btn-primary">Book Now</a>
+              </div>
             </div>
           </div>
         </div>
@@ -245,6 +248,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 0;
   }
 
+  .pricing-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
   .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -264,6 +273,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .btn-primary:hover {
     background: #134E4A;
     transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #0F766E;
+    border: 2px solid #0F766E;
+  }
+
+  .btn-secondary:hover {
+    background: #0F766E;
+    color: white;
   }
 
   .process {
@@ -425,6 +445,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .pricing-content p {
       margin-bottom: 0;
+    }
+
+    .pricing-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .pricing-buttons .btn {
+      width: 100%;
+      text-align: center;
     }
 
     .process-steps {
