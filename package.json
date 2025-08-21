@@ -13,10 +13,10 @@
     "performance-check": "npm run build && npm run lighthouse"
   },
   "dependencies": {
-    "astro": "^5.13.2"
+    "astro": "^5.13.2",
+    "terser": "^5.43.1"
   },
   "devDependencies": {
-    "terser": "^5.43.1",
     "lighthouse": "^11.6.0"
   }
 }
