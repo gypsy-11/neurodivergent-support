@@ -180,11 +180,35 @@ const serviceStructuredData = {
 </BaseLayout>
 
 <style>
-  /* Hero section overrides for homepage */
+  /* Hero section styles - match about.astro */
+  .hero {
+    background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+    color: white;
+    padding: 4rem 0;
+  }
+
   .hero-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -361,6 +385,10 @@ const serviceStructuredData = {
     .hero-content {
       grid-template-columns: 1fr;
       text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
     }
 
     .hero-buttons {
