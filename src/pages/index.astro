@@ -93,7 +93,7 @@ const serviceStructuredData = {
       </div>
       <div class="hero-image">
         <img 
-          src="https://images.unsplash.com/photo-1533900634839-91e7a120a88a?w=800&h=600&fit=crop&crop=center" 
+          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop&crop=center" 
           alt="Family receiving neurodivergent support coaching - compassionate and understanding environment"
           width="400"
           height="300"
@@ -178,9 +178,42 @@ const serviceStructuredData = {
 </BaseLayout>
 
 <style>
+  /* Hero section specific styles */
+  .hero {
+    background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+    color: white;
+    padding: 4rem 0;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
   .hero-image-optimized {
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
   }
 
   .hero-buttons {
@@ -345,6 +378,15 @@ const serviceStructuredData = {
   }
 
   @media (max-width: 768px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
     .hero-buttons {
       justify-content: center;
     }
