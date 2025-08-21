@@ -5,9 +5,14 @@
  * Converts images to WebP format and optimizes them for web performance
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Check if ImageMagick is installed
 function checkImageMagick() {
@@ -80,8 +85,9 @@ function main() {
   console.log('✨ Image optimization complete!');
 }
 
-if (require.main === module) {
+// ES module equivalent of require.main === module check
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-module.exports = { convertToWebP, optimizeWebP, processImages };
+export { convertToWebP, optimizeWebP, processImages };
