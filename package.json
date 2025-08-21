@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "astro": "^5.13.2"
+  },
+  "devDependencies": {
+    "terser": "^5.43.1"
   }
 }
