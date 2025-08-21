@@ -1,0 +1,340 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home - Neurodivergent Support Coaching" description="Supporting Australian families with neurodivergent children through compassionate coaching and guidance. Helping mums navigate challenges with confidence and understanding.">
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Supporting Mums of Neurodivergent Children</h1>
+        <p class="hero-subtitle">Compassionate coaching and guidance to help you navigate your family's unique journey with confidence and understanding.</p>
+        <div class="hero-buttons">
+          <a href="/contact" class="btn btn-primary">Book a Consultation</a>
+          <a href="/services" class="btn btn-secondary">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="placeholder-image">
+          <!-- Placeholder for family/coaching image -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="card-icon">🤝</div>
+          <h3>Personalised Support</h3>
+          <p>Tailored coaching sessions designed around your family's specific needs and challenges.</p>
+        </div>
+        <div class="overview-card">
+          <div class="card-icon">🏠</div>
+          <h3>In-Home & Online</h3>
+          <p>Flexible service delivery across Australia - meet in person or connect virtually.</p>
+        </div>
+        <div class="overview-card">
+          <div class="card-icon">💙</div>
+          <h3>Compassionate Care</h3>
+          <p>Understanding support from someone who truly gets the unique joys and challenges you face.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-services">
+    <div class="container">
+      <h2>How We Can Help</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Family Coaching</h4>
+          <p>Navigate daily challenges, build stronger family connections, and develop strategies that work for your unique situation.</p>
+          <a href="/services" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <h4>Advocacy Support</h4>
+          <p>Get support with school meetings, therapy appointments, and navigating systems to ensure your child gets what they need.</p>
+          <a href="/services" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <h4>Parent Wellness</h4>
+          <p>Self-care isn't selfish. Learn strategies to maintain your wellbeing while caring for your neurodivergent child.</p>
+          <a href="/services" class="service-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <div class="container">
+      <blockquote>
+        <p>"The support and understanding I received helped me transform from feeling overwhelmed and isolated to confident and empowered in my parenting journey."</p>
+        <cite>- Sarah M., Melbourne</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Take the Next Step?</h2>
+      <p>Book a free 30-minute consultation to discuss your family's needs and how we can support your journey.</p>
+      <a href="/contact" class="btn btn-primary btn-large">Get Started Today</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+    color: white;
+    padding: 4rem 0;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .btn-primary {
+    background: #0F766E;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #134E4A;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #0F766E;
+  }
+
+  .btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .placeholder-image {
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .overview {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .overview-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .overview-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .overview-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0F766E;
+  }
+
+  .featured-services {
+    padding: 4rem 0;
+  }
+
+  .featured-services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #0F766E;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0F766E;
+  }
+
+  .service-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .service-link {
+    color: #14B8A6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .service-link:hover {
+    color: #0F766E;
+  }
+
+  .testimonial {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #0F766E 0%, #134E4A 100%);
+    color: white;
+  }
+
+  .testimonial blockquote {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .testimonial cite {
+    display: block;
+    margin-top: 2rem;
+    font-size: 1rem;
+    opacity: 0.9;
+    font-style: normal;
+  }
+
+  .cta {
+    padding: 4rem 0;
+    background: #f8f9fa;
+    text-align: center;
+  }
+
+  .cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0F766E;
+  }
+
+  .cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+
+  @media (max-width: 768px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+    .placeholder-image {
+      width: 300px;
+      height: 250px;
+    }
+
+    .overview-grid,
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial blockquote {
+      font-size: 1.25rem;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

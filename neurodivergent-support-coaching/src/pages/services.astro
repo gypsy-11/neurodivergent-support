@@ -1,0 +1,442 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Services - Neurodivergent Support Coaching" description="Comprehensive coaching services for families with neurodivergent children. Family coaching, parent wellness programs and more.">
+  <section class="hero">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p class="hero-subtitle">Comprehensive support tailored to your family's unique needs</p>
+    </div>
+  </section>
+
+  <section class="services-overview">
+    <div class="container">
+      <div class="service-detail">
+        <div class="service-content">
+          <h2>💆‍♀️ Parent Wellness</h2>
+          <p>Self-care strategies and wellness support for parents navigating the unique challenges of raising neurodivergent children.</p>
+          
+          <h4>What's included:</h4>
+          <ul>
+            <li>Stress management techniques</li>
+            <li>Mindfulness and meditation guidance</li>
+            <li>Boundary setting strategies</li>
+            <li>Self-advocacy skills development</li>
+            <li>Community connection and peer support</li>
+          </ul>
+
+          <div class="pricing">
+            <h4>Investment:</h4>
+            <div class="pricing-content">
+              <p>$120 per session | $600 for 6-session package</p>
+              <a href="/contact" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-content">
+          <h2>🤝 Family Coaching</h2>
+          <p>Personalised one-on-one coaching sessions designed to help you navigate the daily challenges of raising a neurodivergent child.</p>
+          
+          <h4>What's included:</h4>
+          <ul>
+            <li>Weekly or fortnightly coaching sessions (60-90 minutes)</li>
+            <li>Personalised strategies for your family's specific challenges</li>
+            <li>Goal setting and progress tracking</li>
+            <li>Between-session support via email or text</li>
+            <li>Resource recommendations and practical tools</li>
+          </ul>
+
+          <div class="pricing">
+            <h4>Investment:</h4>
+            <div class="pricing-content">
+              <p>$150 per session | $800 for 6-session package</p>
+              <a href="/contact" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-content">
+          <h2>👥 Group Programs</h2>
+          <p>Connect with other families on similar journeys through our structured group coaching programs.</p>
+          
+          <h4>What's included:</h4>
+          <ul>
+            <li>8-week group coaching programs (max 6 families)</li>
+            <li>Weekly 2-hour sessions</li>
+            <li>Peer support and connection</li>
+            <li>Guest expert presentations</li>
+            <li>Private online community access</li>
+          </ul>
+
+          <div class="pricing">
+            <h4>Investment:</h4>
+            <div class="pricing-content">
+              <p>$480 per family for 8-week program</p>
+              <a href="/contact" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <h2>How We Work Together</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Free Consultation</h4>
+          <p>30-minute discovery call to understand your family's needs and goals.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Personalised Plan</h4>
+          <p>We'll create a tailored coaching plan that addresses your specific challenges.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Regular Sessions</h4>
+          <p>Ongoing support through regular coaching sessions and between-session check-ins.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Progress & Growth</h4>
+          <p>Track your progress and adjust strategies as your family grows and changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Families Say</h2>
+      <div class="testimonial-grid">
+        <blockquote>
+          <p>"The group program connected me with other mums who truly understand. The peer support has been as valuable as the coaching itself."</p>
+          <cite>- Emma T., Sydney</cite>
+        </blockquote>
+        
+        <blockquote>
+          <p>"Learning to prioritise my own wellbeing wasn't selfish - it made me a better mum. The parent wellness program was exactly what I needed."</p>
+          <cite>- Rachel S., Melbourne</cite>
+        </blockquote>
+        
+        <blockquote>
+          <p>"The family coaching sessions gave us practical strategies that actually work in our daily routine. We're finally feeling more confident as parents."</p>
+          <cite>- Sarah M., Perth</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Book your free consultation today to discuss which service is right for your family.</p>
+      <a href="/contact" class="btn btn-primary btn-large">Book Free Consultation</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #0F766E 0%, #134E4A 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .services-overview {
+    padding: 4rem 0;
+  }
+
+  .service-detail {
+    margin-bottom: 4rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .service-content {
+    padding: 3rem;
+  }
+
+  .service-detail h2 {
+    color: #0F766E;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-detail p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+
+  .service-detail h4 {
+    color: #0F766E;
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .service-detail ul {
+    margin-bottom: 2rem;
+  }
+
+  .service-detail li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .pricing {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .pricing h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .pricing p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0F766E;
+    margin: 0;
+  }
+
+  .pricing-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pricing-content p {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    background: #0F766E;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #134E4A;
+    transform: translateY(-2px);
+  }
+
+  .process {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .process h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #0F766E;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .step {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .step:hover {
+    transform: translateY(-5px);
+  }
+
+  .step-number {
+    background: #0F766E;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+  }
+
+  .step h4 {
+    color: #0F766E;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .step p {
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .testimonials {
+    padding: 4rem 0;
+  }
+
+  .testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #0F766E;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .testimonials blockquote {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #14B8A6;
+  }
+
+  .testimonials blockquote p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #333;
+  }
+
+  .testimonials cite {
+    font-weight: 600;
+    color: #14B8A6;
+    font-style: normal;
+  }
+
+  .cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #5EEAD4 0%, #14B8A6 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .btn-primary {
+    background: #0F766E;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #134E4A;
+    transform: translateY(-2px);
+  }
+
+  .btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .service-content {
+      padding: 2rem;
+    }
+
+    .service-detail h2 {
+      font-size: 1.75rem;
+    }
+
+    .pricing-content {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .pricing-content p {
+      margin-bottom: 0;
+    }
+
+    .process-steps {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

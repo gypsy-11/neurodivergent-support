@@ -1,0 +1,615 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact - Neurodivergent Support Coaching" description="Get in touch for your free consultation. Contact us by phone, email, or through our online form to discuss your family's needs.">
+  <section class="hero">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p class="hero-subtitle">Ready to take the first step? Let's connect and discuss how we can support your family's journey.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form-section">
+          <h2>Send us a Message</h2>
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Your Location</label>
+              <input type="text" id="location" name="location" placeholder="City, State">
+            </div>
+
+            <div class="form-group">
+              <label for="children">Tell us about your children</label>
+              <textarea id="children" name="children" rows="3" placeholder="Ages, diagnosed conditions (if comfortable sharing), main challenges..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="services">Which services interest you?</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="family-coaching">
+                  <span class="checkmark"></span>
+                  Family Coaching
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="advocacy-support">
+                  <span class="checkmark"></span>
+                  Advocacy Support
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="parent-wellness">
+                  <span class="checkmark"></span>
+                  Parent Wellness
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="group-programs">
+                  <span class="checkmark"></span>
+                  Group Programs
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="preferred-contact">Preferred Contact Method</label>
+              <select id="preferred-contact" name="preferred-contact">
+                <option value="">Please select...</option>
+                <option value="phone">Phone Call</option>
+                <option value="email">Email</option>
+                <option value="video">Video Call</option>
+                <option value="text">Text Message</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="availability">Best Times to Contact You</label>
+              <textarea id="availability" name="availability" rows="2" placeholder="e.g., Weekday mornings, after 3pm, weekends..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="message">How can we help your family?</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your current challenges, goals, or any questions you have..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label consent-checkbox">
+                <input type="checkbox" name="consent" required>
+                <span class="checkmark"></span>
+                I consent to being contacted about neurodivergent support coaching services. Your information will be kept strictly confidential.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-info-section">
+          <h2>Contact Information</h2>
+          
+          <div class="contact-method">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p>(02) 1234 5678</p>
+              <p class="contact-note">Available Monday-Friday, 9am-5pm AEST</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>info@neurodivergentsupport.com.au</p>
+              <p class="contact-note">We respond within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">💻</div>
+            <div class="contact-details">
+              <h4>Free Consultation</h4>
+              <p>30-minute discovery call</p>
+              <p class="contact-note">Book directly through our calendar system</p>
+            </div>
+          </div>
+
+          <div class="emergency-info">
+            <h3>In Crisis?</h3>
+            <p>If you or your family are experiencing a mental health emergency, please contact:</p>
+            <ul>
+              <li><strong>Emergency Services:</strong> 000</li>
+              <li><strong>Lifeline:</strong> 13 11 14</li>
+              <li><strong>Kids Helpline:</strong> 1800 55 1800</li>
+              <li><strong>Parent Line:</strong> 1300 1300 52</li>
+            </ul>
+          </div>
+
+          <div class="privacy-info">
+            <h3>Your Privacy Matters</h3>
+            <p>All information shared with us is kept strictly confidential in accordance with Australian privacy laws. We never share your details without your explicit consent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>What happens during the free consultation?</h4>
+          <p>We'll spend 30 minutes getting to know your family, understanding your current challenges, and discussing which of our services might be the best fit. There's no pressure or obligation.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Do you work with children directly?</h4>
+          <p>While our primary focus is coaching parents and families, children may be involved in some sessions when appropriate and beneficial to the family's goals.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What if my child doesn't have a formal diagnosis?</h4>
+          <p>A formal diagnosis isn't required. If you're navigating challenges commonly associated with neurodivergence, we're here to support you regardless of diagnostic status.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How long does coaching typically take?</h4>
+          <p>Every family is different. Some see benefits after just a few sessions, while others prefer ongoing support. We work at your pace and adjust as your needs change.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Can you help with school issues?</h4>
+          <p>Absolutely! Educational advocacy is one of our specialties. We can help with IEP meetings, communication with teachers, and navigating school support systems.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What about NDIS support?</h4>
+          <p>While we don't provide NDIS services directly, we can help you navigate the system, understand your options, and advocate for appropriate supports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-steps">
+    <div class="container">
+      <h2>What Happens Next?</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>You Reach Out</h4>
+          <p>Send us a message or give us a call - whichever feels more comfortable for you.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>We Connect</h4>
+          <p>We'll respond within 24 hours to schedule your free 30-minute consultation.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Discovery Call</h4>
+          <p>We'll discuss your family's needs and explore how we can best support your journey.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Moving Forward</h4>
+          <p>If it feels like a good fit, we'll create a personalised plan and schedule your first session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #0F766E 0%, #134E4A 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-form-section h2,
+  .contact-info-section h2 {
+    color: #0F766E;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #0F766E;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #14B8A6;
+  }
+
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .checkbox-label {
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal !important;
+    color: #666 !important;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: #14B8A6;
+    border-color: #14B8A6;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+  }
+
+  .consent-checkbox {
+    margin-top: 1rem;
+  }
+
+  .consent-checkbox .checkmark {
+    margin-right: 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background: #0F766E;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #134E4A;
+    transform: translateY(-2px);
+  }
+
+  .btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .contact-info-section {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 12px;
+    height: fit-content;
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-details h4 {
+    color: #0F766E;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-details p {
+    margin-bottom: 0.25rem;
+    color: #333;
+  }
+
+  .contact-note {
+    color: #666 !important;
+    font-size: 0.9rem !important;
+  }
+
+  .emergency-info,
+  .privacy-info {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border-left: 4px solid #dc3545;
+  }
+
+  .privacy-info {
+    border-left-color: #14B8A6;
+  }
+
+  .emergency-info h3,
+  .privacy-info h3 {
+    color: #0F766E;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .emergency-info ul {
+    margin: 1rem 0 0 1rem;
+  }
+
+  .emergency-info li {
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+
+  .faq-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .faq-section h2 {
+    text-align: center;
+    color: #0F766E;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .faq-item h4 {
+    color: #0F766E;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .faq-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .next-steps {
+    padding: 4rem 0;
+  }
+
+  .next-steps h2 {
+    text-align: center;
+    color: #0F766E;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .step {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .step:hover {
+    transform: translateY(-5px);
+  }
+
+  .step-number {
+    background: #0F766E;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+  }
+
+  .step h4 {
+    color: #0F766E;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .step p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .checkbox-group {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-grid,
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-section h2,
+    .next-steps h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Simple form validation and enhancement
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.contact-form');
+    
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Basic validation
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.style.borderColor = '#dc3545';
+          } else {
+            field.style.borderColor = '#e9ecef';
+          }
+        });
+        
+        if (isValid) {
+          // Here you would normally send the form data to your server
+          alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+          form.reset();
+        } else {
+          alert('Please fill in all required fields.');
+        }
+      });
+    }
+  });
+</script>
