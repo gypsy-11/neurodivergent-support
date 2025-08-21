@@ -38,3 +38,4 @@ The website is built with Astro.js. Visit `http://localhost:4321/` when running 
 ## Business Analysis
 
 Competitor analysis and business strategy documents are located in the `competitor-analysis/` directory.
+# neurodivergent-support
