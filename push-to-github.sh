@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Add all changes
+echo "Adding all changes..."
 git add .
 
-# Commit with descriptive message
+echo "Committing changes..."
 git commit -m "Fix hero section CSS conflicts - add !important declarations to ensure green gradient background displays properly"
 
-# Push to main branch
+echo "Pushing to GitHub..."
 git push origin main
 
-echo "Changes committed and pushed successfully!"
+echo "✅ Changes successfully pushed to GitHub!"
